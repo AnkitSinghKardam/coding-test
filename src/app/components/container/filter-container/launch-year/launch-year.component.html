@@ -1,0 +1,7 @@
+<h6 class="text-center">Launch Year</h6>
+<ng-container *ngFor="let year of years">
+        <label>
+            <input type="radio" name="year" [value]="year">
+            <span [ngClass]="year == sYear ? 'active': null" (click)="selectedYear($event)" >{{year}}</span>
+        </label>
+</ng-container>

@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-lg-3 col-md-6"  *ngFor="let item of getData">
+        <div class="p-3 bg-white mb-4">
+            <img [src]="item.links.mission_patch_small" alt="alt tag" class="img-fluid w-sm-100" width="219" height="219">
+            <h4>{{item.mission_name}} #{{item.flight_number}}</h4>
+            <div class="info-data">
+                <div>
+                    <b>mission ids:</b> {{item.mission_id}}
+                </div>
+                <div>
+                    <b>launch year:</b> {{item.launch_year}}
+                </div>
+                <div>
+                    <b>Successful launch:</b> {{item.launch_success}}
+                </div>
+
+                <div *ngFor="let x of item.rocket.first_stage.cores">
+                    <b>Successful landing:</b> {{x.land_success}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

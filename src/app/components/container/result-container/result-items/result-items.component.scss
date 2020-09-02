@@ -1,0 +1,26 @@
+$heading:#35408e;
+$bg:#f2f2f2;
+.p-3{
+    border-radius: 4px;
+    img{
+        background: $bg;
+    }
+    h4{
+        color:$heading;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 1rem;    
+    }
+    .info-data{
+        b{
+            text-transform: capitalize;
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .p-3{
+        img {
+            width: 100%;
+        }
+    }
+}

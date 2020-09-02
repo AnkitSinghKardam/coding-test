@@ -1,0 +1,7 @@
+<h6 class="text-center">Successful Landing</h6>
+<ng-container *ngFor="let landing of landings">
+    <label>
+        <input type="radio" name="sucLanding" [value]="landing">
+        <span [ngClass]="landing == sLanding ? 'active': null" (click)="sucLanding($event)">{{landing}}</span>
+    </label>
+</ng-container>
